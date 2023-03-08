@@ -329,68 +329,22 @@ img {
 .btn.primary {
   color: var(--background-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.btn.secondary {
+/* .btn.secondary {
   color: var(--accent-color);
   background-color: var(--background-color);
   border: 2px, solid, var(--accent-color);
-}
-.btn.primary:hover,
-.btn.primary:focus {
-  color: var(--accent-color);
-  background-color: var(--background-color);
-  border: 2px, solid, var(--accent-color);
-}
+} */
 
-/* Модальне вікно */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-   transform: translate(-50%, -50%) scale(1.1);
-}
-
-.modal {  
-  position: absolute;
-  top: 50%;
-  left: 50%;
- 
- 
-  min-width: 528px;
-  min-height: 581px;
-  padding: 15px;
-  
-  background-color: #ffffff; 
-
-  transform: translate(-50%, -50%) scale(1);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
+.hero .btn.primary:hover,
+.hero .btn.primary:focus {  
+  background-color: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
-
-.close-modal {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
 
 /* Особливості \ features */
 .feature-list {
@@ -701,6 +655,182 @@ display: block;
   background-color: var(--accent-color);
 }
 
+/* Модальне вікно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+   transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ 
+ 
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  
+  background-color: #ffffff; 
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-title{
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.form-list input {
+  display: block;
+  width: 100%;
+}
+
+.form-item {
+  position: relative;
+  margin-top: 10px;
+}
+
+.user-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+
+}
+
+.user-input {
+  margin-top: 4px;
+  padding-left: 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-item:hover .user-input,
+.form-item:focus .user-input {
+  border: 1px solid #2196F3;
+}
+
+.form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  top: 50%;
+  transform: translateZ(-50%);
+  fill: #212121;
+}
+
+.form-item:hover .form-icon {
+  fill: var(--accent-color);
+}
+
+.user-comment {
+
+}
+
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+/* textarea:placeholder-shown {
+  color: rgba(117, 117, 117, 0.5);
+} */
+
+textarea:hover {
+  border: 1px solid #2196F3;
+}
+
+.conditions {
+  margin-left: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.conditions-link {
+  color: var(--accent-color);
+}
+
+.btn.send {
+  margin-top: 30px;
+  color: #FFFFFF;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.btn.send:hover, .btn.send:focus {
+  background: #188CE8;
+
+}
+
+.checkbox-my {
+ position: relative;
+}
+
+.checkbox-icon {
+ 
+ left: 0;
+ top: 4px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.checkbox-my-icon {
+  
+}
+
+
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
 
 
 
